@@ -19,7 +19,6 @@ exports.registerValidators = [
     .normalizeEmail(),
     body('password', 'Password must be at least 8 characters')
         .isLength({min: 1, max: 56})
-        .isAlphanumeric()
         .trim(),
     body('confirm')
         .custom((value, {req}) => {
