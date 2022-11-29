@@ -45,7 +45,7 @@ if ($card) {
                 <td>${c.title}</td>
                 <td>${c.count}</td>
                 <td>
-                  <button class="btn btm-small js-remove" data-id="${c.id}" data-csrf="${csrf}">Удалить</button>
+                  <button class="btn btm-small js-remove" data-id="${c.id}" data-csrf="${csrf}">Delete</button>
                 </td>
               </tr>
               `
@@ -53,7 +53,7 @@ if ($card) {
             $card.querySelector('tbody').innerHTML = html
             $card.querySelector('.price').textContent = toCurrency(card.price)
           } else {
-            $card.innerHTML = '<p>Корзина пуста</p>'
+            $card.innerHTML = '<p>Card is Empty</p>'
           }
         })
     }
