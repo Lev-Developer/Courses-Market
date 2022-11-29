@@ -42,26 +42,26 @@
             <h1>Create Account</h1>
       <form action="/auth/register" method="POST" novalidate>
         <div class="input-field">
-          <input id="remail" name="email" type="email" class="validate" required>
+          <input id="remail" name="email" type="email" class="validate" required value="{{data.email}}">
           <label for="remail">Email</label>
           <span class="helper-text" data-error="email"></span>
         </div>
 
         <div class="input-field">
-          <input id="rpassword" name="password" type="password" class="validate" required>
+          <input id="rpassword" name="password" type="password" class="validate" required  value="{{data.password}}">
           <label for="rpassword">Password</label>
           <span class="helper-text" data-error="password"></span>
         </div>
          
 
          <div class="input-field">
-          <input id="confirm" name="confirm" type="password" class="validate" required>
+          <input id="confirm" name="confirm" type="password" class="validate" required value="{{data.password}}">
           <label for="confirm">Password again</label>
           <span class="helper-text" data-error="password"></span>
         </div>
 
         <div class="input-field">
-          <input id="name" name="name" type="text" class="validate" required>
+          <input id="name" name="name" type="text" class="validate" required value="{{data.name}}">
           <label for="name">Name</label>
           <span class="helper-text" data-error="name"></span>
         </div>

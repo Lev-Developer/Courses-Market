@@ -77,7 +77,13 @@ router.post('/register', registerValidators, async (req, res) => {
     }
       const hashPassword = await bcrypt.hash(password, 10)
       const user = new User({
-        email, name, password: hashPassword, cart: {items: []}
+        email, name, password: hashPassword,
+        cart: {items: []},
+        data:{
+          email: req.body.email,
+          password: req.body.password,
+          name: req.body.name
+        }
       })
       await user.save()
       res.redirect('/auth/login#login')
